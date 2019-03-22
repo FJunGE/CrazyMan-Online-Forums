@@ -2,110 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe578114-703d-47ae-b7b6-d6a378289707" name="Default Changelist" comment="">
-      <change beforePath="W:/.editorconfig" beforeDir="false" afterPath="W:/.editorconfig" afterDir="false" />
-      <change beforePath="W:/.env.example" beforeDir="false" afterPath="W:/.env.example" afterDir="false" />
-      <change beforePath="W:/.gitattributes" beforeDir="false" afterPath="W:/.gitattributes" afterDir="false" />
-      <change beforePath="W:/.gitignore" beforeDir="false" afterPath="W:/.gitignore" afterDir="false" />
-      <change beforePath="W:/.idea/.name" beforeDir="false" afterPath="W:/.idea/.name" afterDir="false" />
       <change beforePath="W:/.idea/W.iml" beforeDir="false" afterPath="W:/.idea/W.iml" afterDir="false" />
-      <change beforePath="W:/.idea/encodings.xml" beforeDir="false" afterPath="W:/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="W:/.idea/misc.xml" beforeDir="false" afterPath="W:/.idea/misc.xml" afterDir="false" />
-      <change beforePath="W:/.idea/modules.xml" beforeDir="false" afterPath="W:/.idea/modules.xml" afterDir="false" />
       <change beforePath="W:/.idea/php.xml" beforeDir="false" afterPath="W:/.idea/php.xml" afterDir="false" />
-      <change beforePath="W:/.idea/vcs.xml" beforeDir="false" afterPath="W:/.idea/vcs.xml" afterDir="false" />
       <change beforePath="W:/.idea/workspace.xml" beforeDir="false" afterPath="W:/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="W:/CHANGELOG.md" beforeDir="false" afterPath="W:/CHANGELOG.md" afterDir="false" />
-      <change beforePath="W:/app/Console/Kernel.php" beforeDir="false" afterPath="W:/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="W:/app/Exceptions/Handler.php" beforeDir="false" afterPath="W:/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="W:/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="W:/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="W:/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="W:/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="W:/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="W:/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="W:/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Kernel.php" beforeDir="false" afterPath="W:/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="W:/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/CheckForMaintenanceMode.php" beforeDir="false" afterPath="W:/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/EncryptCookies.php" beforeDir="false" afterPath="W:/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="W:/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/TrimStrings.php" beforeDir="false" afterPath="W:/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="W:/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="W:/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="W:/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="W:/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="W:/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="W:/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="W:/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="W:/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="W:/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="W:/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="W:/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="W:/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="W:/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="W:/app/User.php" beforeDir="false" afterPath="W:/app/User.php" afterDir="false" />
-      <change beforePath="W:/artisan" beforeDir="false" afterPath="W:/artisan" afterDir="false" />
-      <change beforePath="W:/bootstrap/app.php" beforeDir="false" afterPath="W:/bootstrap/app.php" afterDir="false" />
-      <change beforePath="W:/bootstrap/cache/.gitignore" beforeDir="false" afterPath="W:/bootstrap/cache/.gitignore" afterDir="false" />
       <change beforePath="W:/composer.json" beforeDir="false" afterPath="W:/composer.json" afterDir="false" />
       <change beforePath="W:/composer.lock" beforeDir="false" afterPath="W:/composer.lock" afterDir="false" />
       <change beforePath="W:/config/app.php" beforeDir="false" afterPath="W:/config/app.php" afterDir="false" />
-      <change beforePath="W:/config/auth.php" beforeDir="false" afterPath="W:/config/auth.php" afterDir="false" />
-      <change beforePath="W:/config/broadcasting.php" beforeDir="false" afterPath="W:/config/broadcasting.php" afterDir="false" />
-      <change beforePath="W:/config/cache.php" beforeDir="false" afterPath="W:/config/cache.php" afterDir="false" />
       <change beforePath="W:/config/database.php" beforeDir="false" afterPath="W:/config/database.php" afterDir="false" />
-      <change beforePath="W:/config/filesystems.php" beforeDir="false" afterPath="W:/config/filesystems.php" afterDir="false" />
-      <change beforePath="W:/config/hashing.php" beforeDir="false" afterPath="W:/config/hashing.php" afterDir="false" />
-      <change beforePath="W:/config/logging.php" beforeDir="false" afterPath="W:/config/logging.php" afterDir="false" />
-      <change beforePath="W:/config/mail.php" beforeDir="false" afterPath="W:/config/mail.php" afterDir="false" />
-      <change beforePath="W:/config/queue.php" beforeDir="false" afterPath="W:/config/queue.php" afterDir="false" />
-      <change beforePath="W:/config/services.php" beforeDir="false" afterPath="W:/config/services.php" afterDir="false" />
-      <change beforePath="W:/config/session.php" beforeDir="false" afterPath="W:/config/session.php" afterDir="false" />
-      <change beforePath="W:/config/view.php" beforeDir="false" afterPath="W:/config/view.php" afterDir="false" />
-      <change beforePath="W:/database/.gitignore" beforeDir="false" afterPath="W:/database/.gitignore" afterDir="false" />
-      <change beforePath="W:/database/factories/UserFactory.php" beforeDir="false" afterPath="W:/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="W:/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="W:/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="W:/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="W:/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="W:/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="W:/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="W:/package.json" beforeDir="false" afterPath="W:/package.json" afterDir="false" />
-      <change beforePath="W:/phpunit.xml" beforeDir="false" afterPath="W:/phpunit.xml" afterDir="false" />
-      <change beforePath="W:/public/.htaccess" beforeDir="false" afterPath="W:/public/.htaccess" afterDir="false" />
-      <change beforePath="W:/public/css/app.css" beforeDir="false" afterPath="W:/public/css/app.css" afterDir="false" />
-      <change beforePath="W:/public/favicon.ico" beforeDir="false" afterPath="W:/public/favicon.ico" afterDir="false" />
-      <change beforePath="W:/public/index.php" beforeDir="false" afterPath="W:/public/index.php" afterDir="false" />
-      <change beforePath="W:/public/js/app.js" beforeDir="false" afterPath="W:/public/js/app.js" afterDir="false" />
-      <change beforePath="W:/public/robots.txt" beforeDir="false" afterPath="W:/public/robots.txt" afterDir="false" />
-      <change beforePath="W:/public/web.config" beforeDir="false" afterPath="W:/public/web.config" afterDir="false" />
-      <change beforePath="W:/readme.md" beforeDir="false" afterPath="W:/readme.md" afterDir="false" />
-      <change beforePath="W:/resources/js/app.js" beforeDir="false" afterPath="W:/resources/js/app.js" afterDir="false" />
-      <change beforePath="W:/resources/js/bootstrap.js" beforeDir="false" afterPath="W:/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="W:/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="W:/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="W:/resources/lang/en/auth.php" beforeDir="false" afterPath="W:/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="W:/resources/lang/en/pagination.php" beforeDir="false" afterPath="W:/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="W:/resources/lang/en/passwords.php" beforeDir="false" afterPath="W:/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="W:/resources/lang/en/validation.php" beforeDir="false" afterPath="W:/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="W:/resources/sass/_variables.scss" beforeDir="false" afterPath="W:/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="W:/resources/sass/app.scss" beforeDir="false" afterPath="W:/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="W:/resources/views/auth/login.blade.php" beforeDir="false" afterPath="W:/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="W:/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="W:/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change beforePath="W:/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="W:/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change beforePath="W:/resources/views/auth/register.blade.php" beforeDir="false" afterPath="W:/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="W:/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="W:/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change beforePath="W:/resources/views/home.blade.php" beforeDir="false" afterPath="W:/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="W:/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="W:/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="W:/resources/views/welcome.blade.php" beforeDir="false" afterPath="W:/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="W:/routes/api.php" beforeDir="false" afterPath="W:/routes/api.php" afterDir="false" />
-      <change beforePath="W:/routes/channels.php" beforeDir="false" afterPath="W:/routes/channels.php" afterDir="false" />
-      <change beforePath="W:/routes/console.php" beforeDir="false" afterPath="W:/routes/console.php" afterDir="false" />
       <change beforePath="W:/routes/web.php" beforeDir="false" afterPath="W:/routes/web.php" afterDir="false" />
-      <change beforePath="W:/server.php" beforeDir="false" afterPath="W:/server.php" afterDir="false" />
-      <change beforePath="W:/storage/app/.gitignore" beforeDir="false" afterPath="W:/storage/app/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/app/public/.gitignore" beforeDir="false" afterPath="W:/storage/app/public/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/framework/.gitignore" beforeDir="false" afterPath="W:/storage/framework/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/framework/cache/.gitignore" beforeDir="false" afterPath="W:/storage/framework/cache/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/framework/cache/data/.gitignore" beforeDir="false" afterPath="W:/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/framework/sessions/.gitignore" beforeDir="false" afterPath="W:/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/framework/testing/.gitignore" beforeDir="false" afterPath="W:/storage/framework/testing/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/framework/views/.gitignore" beforeDir="false" afterPath="W:/storage/framework/views/.gitignore" afterDir="false" />
-      <change beforePath="W:/storage/logs/.gitignore" beforeDir="false" afterPath="W:/storage/logs/.gitignore" afterDir="false" />
-      <change beforePath="W:/tests/CreatesApplication.php" beforeDir="false" afterPath="W:/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="W:/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="W:/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="W:/tests/TestCase.php" beforeDir="false" afterPath="W:/tests/TestCase.php" afterDir="false" />
-      <change beforePath="W:/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="W:/tests/Unit/ExampleTest.php" afterDir="false" />
       <change beforePath="W:/vendor/beyondcode/laravel-dump-server/src/Dumper.php" beforeDir="false" afterPath="W:/vendor/beyondcode/laravel-dump-server/src/Dumper.php" afterDir="false" />
       <change beforePath="W:/vendor/fideloper/proxy/composer.json" beforeDir="false" afterPath="W:/vendor/fideloper/proxy/composer.json" afterDir="false" />
       <change beforePath="W:/vendor/filp/whoops/tests/Whoops/RunTest.php" beforeDir="false" afterPath="W:/vendor/filp/whoops/tests/Whoops/RunTest.php" afterDir="false" />
@@ -473,7 +378,6 @@
       <change beforePath="W:/vendor/sebastian/resource-operations/build/generate.php" beforeDir="false" afterPath="W:/vendor/sebastian/resource-operations/build/generate.php" afterDir="false" />
       <change beforePath="W:/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" beforeDir="false" afterPath="W:/vendor/swiftmailer/swiftmailer/lib/swiftmailer_generate_mimes_config.php" afterDir="false" />
       <change beforePath="W:/vendor/symfony/var-dumper/Resources/bin/var-dump-server" beforeDir="false" afterPath="W:/vendor/symfony/var-dumper/Resources/bin/var-dump-server" afterDir="false" />
-      <change beforePath="W:/webpack.mix.js" beforeDir="false" afterPath="W:/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -487,79 +391,60 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/public/index.php">
+        <entry file="file://W:/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="125">
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://W:/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="305">
+              <caret line="161" column="75" selection-start-line="161" selection-start-column="75" selection-end-line="161" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://W:/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding>
-                <element signature="e#1186#1613#0#PHP" />
+                <element signature="n#a#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#button#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/.env">
+        <entry file="file://W:/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://W:/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="250">
-                <caret line="10" selection-start-line="10" selection-end-line="10" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="375">
+              <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/config/app.php">
+        <entry file="file://W:/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2600">
-              <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+            <state relative-caret-position="950">
+              <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/app/Providers/AppServiceProvider.php">
+        <entry file="file://W:/composer.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/app/Http/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/bootstrap/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://W:/vendor/laravel/framework/src/Illuminate/Container/Container.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6375">
-              <caret line="263" column="26" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="27" />
+            <state relative-caret-position="1275">
+              <caret line="147" column="30" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -569,6 +454,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>warr</find>
+      <find>local</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -578,6 +464,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="W:/readme.md" />
+        <option value="W:/config/database.php" />
+        <option value="W:/resources/views/layouts/app.blade.php" />
+        <option value="W:/.env" />
+        <option value="W:/config/app.php" />
       </list>
     </option>
   </component>
@@ -661,6 +551,10 @@
       <path value="W:/vendor/phpspec/prophecy" />
       <path value="W:/vendor/jakub-onderka/php-console-highlighter" />
       <path value="W:/vendor/jakub-onderka/php-console-color" />
+      <path value="W:/vendor/mongodb/mongodb" />
+      <path value="W:/vendor/jenssegers/mongodb" />
+      <path value="W:/vendor/caouecs/laravel-lang" />
+      <path value="W:/vendor/overtrue/laravel-lang" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -682,6 +576,40 @@
               <item name="W" type="b2602c69:ProjectViewProjectNode" />
               <item name="W:" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="W" type="b2602c69:ProjectViewProjectNode" />
+              <item name="W:" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="W" type="b2602c69:ProjectViewProjectNode" />
+              <item name="W:" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="W" type="b2602c69:ProjectViewProjectNode" />
+              <item name="W:" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="W" type="b2602c69:ProjectViewProjectNode" />
+              <item name="W:" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="W" type="b2602c69:ProjectViewProjectNode" />
+              <item name="W:" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="W" type="b2602c69:ProjectViewProjectNode" />
+              <item name="W:" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -694,7 +622,7 @@
     <property name="last_opened_file_path" value="W:/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -722,18 +650,18 @@
       <workItem from="1552025459880" duration="5966000" />
       <workItem from="1552037184728" duration="40000" />
       <workItem from="1552040121083" duration="32000" />
-      <workItem from="1553222210307" duration="1751000" />
+      <workItem from="1553222210307" duration="8113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7789000" />
+    <option name="totallyTimeSpent" value="14151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1672" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22441365" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22441365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -766,30 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://W:/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding>
-            <element signature="e#1186#1613#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://W:/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2600">
-          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://W:/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://W:/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -811,20 +715,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://W:/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://W:/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="250">
-            <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <first_editor relative-caret-position="275">
+            <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://W:/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="e#1186#1613#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/src/config/autoload/local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="39" column="21" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="147" column="30" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="n#a#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#button#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://W:/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="161" column="75" selection-start-line="161" selection-start-column="75" selection-end-line="161" selection-end-column="75" />
         </state>
       </provider>
     </entry>

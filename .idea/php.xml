@@ -77,6 +77,10 @@
       <path value="W:/vendor/phpspec/prophecy" />
       <path value="W:/vendor/jakub-onderka/php-console-highlighter" />
       <path value="W:/vendor/jakub-onderka/php-console-color" />
+      <path value="W:/vendor/mongodb/mongodb" />
+      <path value="W:/vendor/jenssegers/mongodb" />
+      <path value="W:/vendor/caouecs/laravel-lang" />
+      <path value="W:/vendor/overtrue/laravel-lang" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
