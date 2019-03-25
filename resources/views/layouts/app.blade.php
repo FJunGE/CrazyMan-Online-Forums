@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="icon" href="{{ config('app.url','http://localhost')  }}/img/bitbug_favicon.ico" type="image/x-icon">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,7 +25,7 @@
         @include('layouts._header')
 
         <main class="py-4">
-            @include('shared._message')
+            @include('layouts._message')
             @yield('content')
         </main>
 
