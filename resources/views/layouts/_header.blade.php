@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
         <a class="navbar-brand text-22 d-flex align-items-center antialiased active" href="{{ url('/') }}">
-            <img alt="image" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//logo.png" height="35" class="mr-2 avatar-40">
+            <img alt="image" src="{{ config('app.url','http://localhost')  }}/img/crazyman-logo.png" height="35" class="mr-2 avatar-40">
             <span class="text-muted ml-1">{{ config('app.name', 'CrazyMan') }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

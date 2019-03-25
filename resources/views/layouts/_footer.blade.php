@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row text-center align-items-center">
             <div class="col-12 col-lg-2 text-lg-left">
-                <img alt="image" src="https://cdn.jsdelivr.net/gh/froala/design-blocks@2.0.1/dist/imgs//logo.png" height="40">
+                {{--<img alt="image" src="{{ config('app.url','http://localhost')  }}/img/crazyman-logo.png" height="40">--}}
             </div>
 
             <div class="col mt-4 mt-lg-0 text-center">
