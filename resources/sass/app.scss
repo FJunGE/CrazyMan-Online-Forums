@@ -14,10 +14,18 @@
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
+$font-color:#636b6f;
+$bg-color:#fff;
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
-  color: #636b6f;
+  color: $font-color;
+
+  a{color: $font-color;}
+  a:hover{
+    color: #96a4ab;
+    text-decoration: none;
+  }
 }
 
 .cursor-pointer {
@@ -32,6 +40,10 @@ body {
   width: 30px;
   height: 30px;
   @extend .box-radius;/*引入外部 css 样式*/
+}
+
+.box-body{
+  padding: 1.5rem;
 }
 
 .navbar-laravel {
@@ -71,21 +83,60 @@ body {
 }
 
 .index-list{
+  /* 主界面 */
   .box{
-    background-color: #fff;
+    background-color: $bg-color;
     box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
-    .box-body{
-      padding: 1.5rem;
-    }
+    padding: 0px 0px;
+
 
     .list-group-item{
-      background-color: #fff;
+      background-color: $bg-color;
       border: 1px solid #f2f2f2
     }
   }
-  .box-flush{
-    padding: 0px 0px;
+  /* 侧边栏 */
+  .list-box{
+    .icon-link{
+      margin-top:5px;
+    }
+  }
+}
 
+
+.topic-show{
+
+  /* 主界面 */
+  .box{
+    background-color: $bg-color;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+
+    .list-group-item{
+      background-color: $bg-color;
+      border: 1px solid #f2f2f2
+    }
+    .markdown-body{
+      font-size:15px;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+  }
+
+  /*左侧操作悬浮框*/
+  .thread-toolbar{
+    position: fixed;
+    top: 150px;
+    margin-left: -80px;
+    .btn{
+      color:$font-color;
+    }
+  }
+
+  /* 侧边栏 */
+  .list-box{
+    .icon-link{
+      margin-top:5px;
+    }
   }
 }
 

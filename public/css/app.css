@@ -16430,6 +16430,15 @@ body {
   color: #636b6f;
 }
 
+body a {
+  color: #636b6f;
+}
+
+body a:hover {
+  color: #96a4ab;
+  text-decoration: none;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -16443,6 +16452,10 @@ body {
   width: 30px;
   height: 30px;
   /*引入外部 css 样式*/
+}
+
+.box-body {
+  padding: 1.5rem;
 }
 
 .navbar-laravel {
@@ -16480,13 +16493,15 @@ body {
   color: inherit;
 }
 
+.index-list {
+  /* 主界面 */
+  /* 侧边栏 */
+}
+
 .index-list .box {
   background-color: #fff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-}
-
-.index-list .box .box-body {
-  padding: 1.5rem;
+  padding: 0px 0px;
 }
 
 .index-list .box .list-group-item {
@@ -16494,7 +16509,43 @@ body {
   border: 1px solid #f2f2f2;
 }
 
-.index-list .box-flush {
-  padding: 0px 0px;
+.index-list .list-box .icon-link {
+  margin-top: 5px;
+}
+
+.topic-show {
+  /* 主界面 */
+  /*左侧操作悬浮框*/
+  /* 侧边栏 */
+}
+
+.topic-show .box {
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.topic-show .box .list-group-item {
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+}
+
+.topic-show .box .markdown-body {
+  font-size: 15px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.topic-show .thread-toolbar {
+  position: fixed;
+  top: 150px;
+  margin-left: -80px;
+}
+
+.topic-show .thread-toolbar .btn {
+  color: #636b6f;
+}
+
+.topic-show .list-box .icon-link {
+  margin-top: 5px;
 }
 

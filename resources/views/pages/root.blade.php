@@ -2,7 +2,7 @@
 @section('title','首页')
 @section('content')
     <div class="container index-list">
-        <div class="row mt-3">
+        <div class="row mt-2">
 
             <div class="col-md-9">
                 <div class="box box-flush box-radius">
@@ -16,12 +16,8 @@
                     @include('pages._list')
                 </div>
             </div>
-            <div class="col-md-3" >
-                <div class="box box-radius mb-2">
-                    <div class="thread-items mb-2">论坛公告</div>
-                    <div>内容</div>
-                </div>
-                <div class="box" style="border:1px solid">1231</div>
+            <div class="col-md-3 list-box">
+                @include('pages._sidebar')
             </div>
         </div>
     </div>
