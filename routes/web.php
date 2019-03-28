@@ -11,9 +11,16 @@
 |
 */
 
+/* Test route */
 Route::get('/', function () {
     return view('pages.root');
-});
+})->name('index');
+
+
+Route::get('/topic/show', function (){
+    return view('topics.show');
+})->name('topic.show');
+
 
 Auth::routes();
 
