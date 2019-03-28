@@ -16425,6 +16425,7 @@ readers do not read off random characters that represent icons */
 }
 
 body {
+  background-color: #f8f8f8;
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
   color: #636b6f;
@@ -16444,6 +16445,8 @@ body a:hover {
 }
 
 .box-radius,
+.avatar-80,
+.avatar-40,
 .avatar-30 {
   border-radius: 5px;
 }
@@ -16451,6 +16454,18 @@ body a:hover {
 .avatar-30 {
   width: 30px;
   height: 30px;
+  /*引入外部 css 样式*/
+}
+
+.avatar-40 {
+  width: 40px;
+  height: 40px;
+  /*引入外部 css 样式*/
+}
+
+.avatar-80 {
+  width: 80px;
+  height: 80px;
   /*引入外部 css 样式*/
 }
 
@@ -16516,7 +16531,7 @@ body a:hover {
 .topic-show {
   /* 主界面 */
   /*左侧操作悬浮框*/
-  /* 侧边栏 */
+  /* 右侧边栏 */
 }
 
 .topic-show .box {
@@ -16529,10 +16544,12 @@ body a:hover {
   border: 1px solid #f2f2f2;
 }
 
-.topic-show .box .markdown-body {
-  font-size: 15px;
-  line-height: 1.5;
-  word-wrap: break-word;
+.topic-show .box .reply-list .line-divide {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.topic-show .box .reply-list .btn {
+  color: #636b6f;
 }
 
 .topic-show .thread-toolbar {

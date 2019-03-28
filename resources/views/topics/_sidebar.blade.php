@@ -1,9 +1,18 @@
-<div class="box box-radius mb-2">
-    <div class="list-group-item">
-        <a href="" class="p-1">
-            <i class="fa fa-bullhorn"></i>
-            <span>论坛公告</span>
-        </a>
+<div class="box box-radius mb-2 position-relative">
+    <div class="">
+        <div class="box-body d-flex">
+            <div class="">
+                <a href="">
+                    <img src="{{ config('app.url','http://localhost')  }}/img/avatar.jpg" alt="" class="avatar-80">
+                </a>
+            </div>
+            <div class="ml-auto align-items-center pt-2">
+                <h5>JunGE</h5>
+                <small>杰钡利公司</small>
+                <a href="">
+                    
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="list-group-item"><span>公告主体内容,公告主体内容，公告主体内容，公告主体内容</span></div>
 </div>

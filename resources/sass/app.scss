@@ -16,7 +16,9 @@
 
 $font-color:#636b6f;
 $bg-color:#fff;
+$border-color:#f2f2f2;
 body {
+  background-color: #f8f8f8;
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-size: 14px;
   color: $font-color;
@@ -39,6 +41,18 @@ body {
 .avatar-30{
   width: 30px;
   height: 30px;
+  @extend .box-radius;/*引入外部 css 样式*/
+}
+
+.avatar-40{
+  width: 40px;
+  height: 40px;
+  @extend .box-radius;/*引入外部 css 样式*/
+}
+
+.avatar-80{
+  width: 80px;
+  height: 80px;
   @extend .box-radius;/*引入外部 css 样式*/
 }
 
@@ -92,7 +106,7 @@ body {
 
     .list-group-item{
       background-color: $bg-color;
-      border: 1px solid #f2f2f2
+      border: 1px solid $border-color
     }
   }
   /* 侧边栏 */
@@ -113,12 +127,15 @@ body {
 
     .list-group-item{
       background-color: $bg-color;
-      border: 1px solid #f2f2f2
+      border: 1px solid $border-color
     }
-    .markdown-body{
-      font-size:15px;
-      line-height: 1.5;
-      word-wrap: break-word;
+    .reply-list{
+      .line-divide{
+        border-bottom: 1px solid $border-color
+      }
+      .btn{
+        color:$font-color;
+      }
     }
   }
 
@@ -132,7 +149,7 @@ body {
     }
   }
 
-  /* 侧边栏 */
+  /* 右侧边栏 */
   .list-box{
     .icon-link{
       margin-top:5px;

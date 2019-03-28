@@ -13,9 +13,13 @@
                         <span>扫码登录成为一种日趋流行的登录方式，它具有较高的安全性，同时又使我们从记忆大量的账号密码并手动输入的繁琐流程中解脱出来，有些平台甚至无账号也能扫码登录，连注册的麻烦都省了。</span>
                     </section>
                 </div>
-                <div class="box box-radius box-body mt-3 mb-3" >
-                    div
+                <div class="reply-count">
+                    56条评论
                 </div>
+                <div class="box box-radius mt-5 mb-3" >
+                    @include('replies._list')
+                </div>
+                @include('replies.comment')
 
                 {{-- 左侧悬浮 --}}
                 <div class="thread-toolbar">
