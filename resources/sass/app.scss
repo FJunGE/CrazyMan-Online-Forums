@@ -56,8 +56,24 @@ body {
   @extend .box-radius;/*引入外部 css 样式*/
 }
 
+/*文本padding边距*/
 .box-body{
   padding: 1.5rem;
+}
+
+/*文本padding边距*/
+.box-body-1{
+  padding-top: 1rem;
+}
+
+/*左侧操作悬浮框*/
+.thread-toolbar{
+  position: fixed;
+  top: 150px;
+  margin-left: -80px;
+  .btn{
+    color:$font-color;
+  }
 }
 
 .navbar-laravel {
@@ -73,8 +89,8 @@ body {
 
 
 .footer {
-  position : absolute;
-  bottom: 0;
+  //position : absolute;
+  //bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
@@ -119,7 +135,13 @@ body {
 
 
 .topic-show{
-
+  .markdown-body{
+    font-size: 15px;
+    line-height: 30px;
+    p{
+      margin-bottom: 3px;
+    }
+  }
   /* 主界面 */
   .box{
     background-color: $bg-color;
@@ -136,16 +158,6 @@ body {
       .btn{
         color:$font-color;
       }
-    }
-  }
-
-  /*左侧操作悬浮框*/
-  .thread-toolbar{
-    position: fixed;
-    top: 150px;
-    margin-left: -80px;
-    .btn{
-      color:$font-color;
     }
   }
 

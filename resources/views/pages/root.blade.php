@@ -15,6 +15,22 @@
                     </div>
                     @include('pages._list')
                 </div>
+
+                {{-- 左侧悬浮 --}}
+                <div class="thread-toolbar">
+                    <div id="clap" class="text-center" style="transform: scale(1, 1);">
+                        <button class="btn btn-light" title="发表一篇自己的文章"><i class="fa fa-pen-alt"></i></button>
+                    </div>
+                    <div class="share-action">
+                        <div class="text-center">
+                            <button class="btn btn-light" title="登录/注册"><i class="fa fa-user-circle"></i></button>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-light" title="签到"><i class="fa fa-magic"></i></button>
+                        </div>
+
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 list-box">
                 @include('pages._sidebar')

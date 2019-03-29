@@ -16469,8 +16469,28 @@ body a:hover {
   /*引入外部 css 样式*/
 }
 
+/*文本padding边距*/
+
 .box-body {
   padding: 1.5rem;
+}
+
+/*文本padding边距*/
+
+.box-body-1 {
+  padding-top: 1rem;
+}
+
+/*左侧操作悬浮框*/
+
+.thread-toolbar {
+  position: fixed;
+  top: 150px;
+  margin-left: -80px;
+}
+
+.thread-toolbar .btn {
+  color: #636b6f;
 }
 
 .navbar-laravel {
@@ -16486,8 +16506,6 @@ body a:hover {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
@@ -16530,8 +16548,16 @@ body a:hover {
 
 .topic-show {
   /* 主界面 */
-  /*左侧操作悬浮框*/
   /* 右侧边栏 */
+}
+
+.topic-show .markdown-body {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.topic-show .markdown-body p {
+  margin-bottom: 3px;
 }
 
 .topic-show .box {
@@ -16549,16 +16575,6 @@ body a:hover {
 }
 
 .topic-show .box .reply-list .btn {
-  color: #636b6f;
-}
-
-.topic-show .thread-toolbar {
-  position: fixed;
-  top: 150px;
-  margin-left: -80px;
-}
-
-.topic-show .thread-toolbar .btn {
   color: #636b6f;
 }
 
