@@ -21,11 +21,6 @@ Route::get('/topic/show', function (){
     return view('topics.show');
 })->name('topic.show');
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

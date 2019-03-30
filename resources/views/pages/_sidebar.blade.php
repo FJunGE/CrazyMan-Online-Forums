@@ -9,6 +9,33 @@
 </div>
 <div class="box box-radius mt-3">
     <div class="list-group-item">
+        <div class="p-1 d-flex">
+            <div>
+                <i class="fa fa-magic"></i>
+                <span class="ml-1 align-self-center">最新积分版</span>
+            </div>
+            <div class="ml-3">
+                <a href="">?</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-2 list-group-item">
+        <ul class="list-group">
+            <li class="d-flex justify-content-center">
+                <img src="{{ config('app.url','http://localhost')  }}/img/avatar.jpg" alt="" class="avatar-30">
+                <div class="ml-3">
+                    <span>JunGE</span>
+                </div>
+                <div class="ml-3">积分
+                    <span class="font-weight-bold">5135880</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="box box-radius mt-3">
+    <div class="list-group-item">
         <div class="p-1">
             <i class="fa fa-link"></i>
             <span>友情链接</span>

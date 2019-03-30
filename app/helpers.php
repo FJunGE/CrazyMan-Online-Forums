@@ -9,5 +9,5 @@ function route_class()
 }
 
 function isIndexClass(){
-    return (Route::currentRouteName() == "index")?"mb-2":"mt-3";
+    return (Route::currentRouteName() == "home")?"mb-2":"mt-3";
 }

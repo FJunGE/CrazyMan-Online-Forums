@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
-        <a class="navbar-brand text-22 d-flex align-items-center antialiased active" href="{{ url('/') }}">
+        <a class="navbar-brand text-22 d-flex align-items-center antialiased active" href="{{ route('index') }}">
             <img alt="image" src="{{ config('app.url','http://localhost')  }}/img/crazyman-logo.png" height="35" class="mr-2 avatar-40">
             <span class="text-muted ml-1">{{ config('app.name', 'CrazyMan') }}</span>
         </a>
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-1" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav justify-content-center">
-                <li class="nav-item"><a href="" class="nav-link">首页</a></li>
+                <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">首页</a></li>
                 <li class="nav-item"><a href="" class="nav-link">分类</a></li>
                 <li class="nav-item"><a href="" class="nav-link">关于</a></li>
                 <li class="nav-item">

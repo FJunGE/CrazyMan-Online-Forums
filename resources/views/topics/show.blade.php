@@ -40,6 +40,7 @@
 
                             <button class="btn btn-sm btn-light ml-2" title="举报这篇文章">
                                 <i class="fa fa-exclamation-circle text-danger"></i>
+                                <span class="align-self-center">举报</span>
                             </button>
 
                             <button class="btn btn-sm btn-light ml-2" title="收藏">

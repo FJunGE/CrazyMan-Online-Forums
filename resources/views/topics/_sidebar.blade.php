@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="box-body-1 d-flex justify-content-center border-bottom">
-            <dl class="text-center w-20 pl-3 m-0">
+            <dl class="text-center w-20 pl-2 m-0">
                 <dt>原创</dt>
                 <dd>1500</dd>
             </dl>
