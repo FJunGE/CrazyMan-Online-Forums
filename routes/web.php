@@ -11,13 +11,14 @@
 |
 */
 
-
-
-
 Route::get('/topic/show', function (){
     return view('topics.show');
 })->name('topic.show');
 
+Route::get('user/show',function(){
+    return view('users.show');
+})->name('users.show');
+
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'PagesController@home')->name('home');
