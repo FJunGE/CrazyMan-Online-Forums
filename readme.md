@@ -7,6 +7,10 @@
 </p>
 
 ## CrazyMan Forums
+特色：
+1、Bootstrap前端布局
+2、GEETEST行为验证 防止恶意注水
+
 主要功能：
 1、用户注册登录验证
 2、极光推送验证
