@@ -16440,6 +16440,10 @@ body a:hover {
   text-decoration: none;
 }
 
+.hide {
+  display: none;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
