@@ -18,16 +18,16 @@
     <link rel="icon" href="{{ config('app.url','http://localhost')  }}/img/bitbug_favicon.ico" type="image/x-icon">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         @include('layouts._header')
 
-        <main class="py-4">
+        <div class="py-4 container">
             @include('layouts._message')
             @yield('content')
-        </main>
+        </div>
 
         @include('layouts._footer')
     </div>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
     <div class="container">
-        <a class="navbar-brand text-22 d-flex align-items-center antialiased active" href="{{ route('index') }}">
+        <a class="navbar-brand text-22 d-flex align-items-center antialiased active" href="{{ route('home') }}">
             <img alt="image" src="{{ config('app.url','http://localhost')  }}/img/crazyman-logo.png" height="35" class="mr-2 avatar-40">
             <span class="text-muted ml-1">{{ config('app.name', 'CrazyMan') }}</span>
         </a>

@@ -40,6 +40,21 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">验证</label>
+
+                            <div class="col-md-6">
+                                {!! Geetest::render() !!}
+
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -50,6 +65,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">

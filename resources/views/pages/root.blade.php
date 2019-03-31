@@ -6,7 +6,7 @@
 
             <div class="col-md-9">
                 <div class="box box-radius">
-                    <img class="first-slide" src="https://static.laravelacademy.org/wp-statics/images/carousel/LaravelAcademy.jpg" alt="First slide" style="width: 100%">
+                    <img class="first-slide" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554014505991&di=22497246e33db17c06e442d5e0c6b380&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01d1d257747cce0000012e7e28e6ef.jpg%402o.jpg" alt="First slide" style="width: 100%">
                 </div>
                 {{-- 列表数据 --}}
                 <div class="box box-flush box-radius mt-4">
