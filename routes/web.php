@@ -11,10 +11,7 @@
 |
 */
 
-/* Test route */
-Route::get('/', function () {
-    return view('pages.root');
-})->name('index');
+
 
 
 Route::get('/topic/show', function (){
@@ -23,4 +20,4 @@ Route::get('/topic/show', function (){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
