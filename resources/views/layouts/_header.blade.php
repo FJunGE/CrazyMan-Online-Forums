@@ -38,19 +38,22 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <img src="{{ config('app.url') }}/img/avatar.jpg" class="avatar-30 img-responsive img-circle mr-1" alt="">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <a class="dropdown-item" href="{{ route('users.show') }}">个人中心</a>
+                        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
+                            <a class="dropdown-item" href="{{ route('users.show') }}"><i class="fa fa-address-card mr-1"></i>个人中心</a>
+                            <a class="dropdown-item" href="{{ route('users.show') }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <form action="{{ route('logout') }}"  method="POST">
+                                {{ csrf_field() }}
+                                <button class="btn btn-danger btn-block" type="submit" name="button">
+                                    退出
+                                </button>
                             </form>
                         </div>
                     </li>
