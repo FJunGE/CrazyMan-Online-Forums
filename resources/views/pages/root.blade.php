@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('title','首页')
+@section('top_css','py-4 container')
 @section('content')
-    <div class="container index-list">
+    <div class="index-list">
         <div class="row mt-2">
 
             <div class="col-md-9">
