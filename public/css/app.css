@@ -16473,6 +16473,12 @@ body a:hover {
   /*引入外部 css 样式*/
 }
 
+.avatar-120 {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+}
+
 /*文本padding边距*/
 
 .box-body {
@@ -16532,8 +16538,9 @@ body a:hover {
   color: inherit;
 }
 
+/* 主界面 */
+
 .index-list {
-  /* 主界面 */
   /* 侧边栏 */
 }
 
@@ -16551,6 +16558,8 @@ body a:hover {
 .index-list .list-box .icon-link {
   margin-top: 5px;
 }
+
+/* 文章詳情 */
 
 .topic-show {
   /* 主界面 */
@@ -16586,5 +16595,24 @@ body a:hover {
 
 .topic-show .list-box .icon-link {
   margin-top: 5px;
+}
+
+/* 个人中心 */
+
+.user-show .user-header {
+  min-height: 40vh;
+  overflow: visible;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.user-show .user-profile {
+  z-index: 2;
+  text-shadow: 1px 1px 10px #3d465e;
+}
+
+.user-show .avatar {
+  border: 3px solid white;
 }
 
