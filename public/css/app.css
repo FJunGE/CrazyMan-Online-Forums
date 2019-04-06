@@ -16503,6 +16503,26 @@ body a:hover {
   color: #636b6f;
 }
 
+/* 右侧侧边栏 */
+
+.list-box .icon-link,
+.topic-show .icon-link,
+.index-list .icon-link {
+  margin-top: 5px;
+}
+
+/*主体阴影样式*/
+
+.body-shadow,
+.user-edit .box,
+.user-show .box,
+.topic-show .box,
+.index-list .box {
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
 .navbar-laravel {
   border-color: #e7e7e7;
   background-color: #fff;
@@ -16541,13 +16561,13 @@ body a:hover {
 /* 主界面 */
 
 .index-list {
-  /* 侧边栏 */
+  /* 主列表 */
+  /* 右侧边栏 */
 }
 
 .index-list .box {
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
   padding: 0px 0px;
+  /*列表样式*/
 }
 
 .index-list .box .list-group-item {
@@ -16555,14 +16575,10 @@ body a:hover {
   border: 1px solid #f2f2f2;
 }
 
-.index-list .list-box .icon-link {
-  margin-top: 5px;
-}
-
 /* 文章詳情 */
 
 .topic-show {
-  /* 主界面 */
+  /* 主列表 */
   /* 右侧边栏 */
 }
 
@@ -16576,8 +16592,7 @@ body a:hover {
 }
 
 .topic-show .box {
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  /*列表样式*/
 }
 
 .topic-show .box .list-group-item {
@@ -16593,11 +16608,12 @@ body a:hover {
   color: #636b6f;
 }
 
-.topic-show .list-box .icon-link {
-  margin-top: 5px;
-}
-
 /* 个人中心 */
+
+.user-show {
+  /* 顶部信息 */
+  /* 主界面 */
+}
 
 .user-show .user-header {
   min-height: 40vh;
@@ -16607,12 +16623,29 @@ body a:hover {
   background-position: 50%;
 }
 
-.user-show .user-profile {
+.user-show .user-header .avatar {
+  border: 3px solid white;
+}
+
+.user-show .user-header .user-profile {
   z-index: 2;
   text-shadow: 1px 1px 10px #3d465e;
 }
 
-.user-show .avatar {
-  border: 3px solid white;
+.user-show .user-show-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+}
+
+.user-show .nav-tab-line .active {
+  border-bottom: 3px solid #3490dc;
+}
+
+/* 个人中心编辑 */
+
+.user-edit {
+  /* 主界面 */
 }
 

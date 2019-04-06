@@ -19,6 +19,10 @@ Route::get('user/show',function(){
     return view('users.show');
 })->name('users.show');
 
+Route::get('user/edit',function(){
+    return view('users.edit.edit');
+})->name('users.edit');
+
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
