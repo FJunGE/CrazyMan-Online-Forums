@@ -4,7 +4,7 @@
 @section('content')
     <div class="user-show">
         {{-- 个人信息 --}}
-        <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('http://img.netbian.com/file/2017/0608/c1f5aeaf9969af9ff3fc47da68a12430.jpg');">
+        <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('http://img.3dmgame.com/uploads/images/news/20181124/1543042277_150670.jpg');">
             <div class="align-items-center flex-row d-md-flex p-2 text-white w-100 position-relative container user-profile">
                 <img src="{{ config('app.url')  }}/img/avatar.jpg" class="avatar-120 avatar" alt="">
                 <div class="ml-md-3">
@@ -35,7 +35,7 @@
         <div class="container pt-4">
             <div class="row">
                 <div class="col-lg-9">
-                    <div class="box box-radius box-flush ">
+                    <div class="list-box">
                         @include('users._list_replie')
                     </div>
                 </div>

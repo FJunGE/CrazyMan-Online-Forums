@@ -1,4 +1,4 @@
-<div class="thread-items mb-2">
+<div class="mb-2 box box-radius">
     <ul class="list-group list-group-flush">
         <li class="list-group-item d-md-flex d-block align-items-center justify-content-between cursor-pointer">
             <div class="d-flex align-items-center w-70">

@@ -113,8 +113,8 @@ body {
 
 
 .footer {
-  position : absolute;
-  bottom: 0;
+  /*position : absolute;
+  bottom: 0;*/
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
@@ -227,6 +227,10 @@ body {
   /* 主界面 */
   .box{
     @extend .body-shadow;
+    .list-group-item{
+      background-color: $bg-color;
+      border: 1px solid $border-color
+    }
   }
 }
 

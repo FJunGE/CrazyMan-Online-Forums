@@ -16536,8 +16536,8 @@ body a:hover {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  /*position : absolute;
+  bottom: 0;*/
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
@@ -16647,5 +16647,10 @@ body a:hover {
 
 .user-edit {
   /* 主界面 */
+}
+
+.user-edit .box .list-group-item {
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
 }
 
