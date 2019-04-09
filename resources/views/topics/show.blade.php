@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('title','文章详情页')
+@section('top_css','py-4 container')
 @section('content')
-    <div class="container topic-show">
+    <div class="topic-show">
         <div class="row mt-2">
             
             <div class="col-md-9">

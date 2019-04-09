@@ -20,9 +20,18 @@
         </div>
     </div>
 
-    <div class="mb-2 list-group-item">
+    <div class="list-group-item">
         <ul class="list-group">
-            <li class="d-flex justify-content-center">
+            <li class="d-flex mb-2 justify-content-center">
+                <img src="{{ config('app.url','http://localhost')  }}/img/avatar.jpg" alt="" class="avatar-30">
+                <div class="ml-3">
+                    <span>JunGE</span>
+                </div>
+                <div class="ml-3">积分
+                    <span class="font-weight-bold">5135880</span>
+                </div>
+            </li>
+            <li class="d-flex mb-2 justify-content-center">
                 <img src="{{ config('app.url','http://localhost')  }}/img/avatar.jpg" alt="" class="avatar-30">
                 <div class="ml-3">
                     <span>JunGE</span>
@@ -41,7 +50,7 @@
             <span>友情链接</span>
         </div>
     </div>
-    <div class="mb-2">
+    <div>
         <ul class="list-group">
             <li class="py-1 list-group-item">
                 <a class="icon-link text-center" href="https://ruby-china.org" rel="nofollow" target="_blank" style="display: block;">
