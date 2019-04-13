@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title','个人中心')
-@section('top_css','')
+@section('top_css','py-4 container')
 @section('content')
     <div class="user-show">
         {{-- 个人信息 --}}
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <div class="container pt-4">
+        <div class="pt-4">
             <div class="row">
                 <div class="col-lg-9">
                     <div class="list-box">
