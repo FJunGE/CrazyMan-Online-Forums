@@ -13,6 +13,8 @@ class PagesController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function home(){
+
         return view('pages.root');
     }
+
 }

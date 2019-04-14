@@ -22,7 +22,7 @@ class EnsureEmailIsVerified
         if ($request->user() && !$request->is('email/*','logout') &&  !$request->user()->hasVerifiedEmail()){
 
             // 邮箱还没验证，跳转到邮箱验证路由
-            $request->session()->flash('warning',"在继续之前请先验证您的 E-mail。 如果您没有收到, .<a href='/email/verify'>点击重新发送 E-mail.</a>");
+            $request->session()->flash('warning',"在继续之前请先验证您的 E-mail。 如果您没有收到, .<a href='/email/resend'>点击重新发送 E-mail.</a>");
         }
         return $next($request);
     }

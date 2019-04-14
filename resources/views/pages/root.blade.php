@@ -14,7 +14,7 @@
                     <div class="box-body">
                         <ul class="nav nav-pills">
                             <li class="nav-item"><a href="" class="nav-link active">最新</a></li>
-                            <li class="nav-item"><a href="" class="nav-link">最热</a></li>
+                            <li class="nav-item"><a href="{{ route('test') }}" class="nav-link">最热</a></li>
                             <li class="nav-item"><a href="" class="nav-link">精华</a></li>
                         </ul>
                     </div>
