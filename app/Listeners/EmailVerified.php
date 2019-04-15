@@ -27,7 +27,7 @@ class EmailVerified
      */
     public function handle(Verified $event)
     {
-        // 监听发送邮件事件
-        Alert::success('邮件发送成功！');
+        // 监听已验证邮件事件
+        alert()->success('邮件激活成功！');
     }
 }
