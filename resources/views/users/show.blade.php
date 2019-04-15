@@ -12,7 +12,7 @@
                     <div class="extends text-white d-none d-md-block d-lg-flex">
                         <div class="mr-1">
                             <i class="fa fa-calendar-alt"></i>
-                            加入于 {{ $user->created_at }}
+                            加入于 {{ $user->created_at->diffForHumans() }}
                         </div>
                     </div>
                     <div class="pt-2">
