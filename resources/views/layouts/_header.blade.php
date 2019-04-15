@@ -44,8 +44,8 @@
 
                         <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
 
-                            <a class="dropdown-item" href="{{ route('users.show') }}"><i class="fa fa-address-card mr-1"></i>个人中心</a>
-                            <a class="dropdown-item" href="{{ route('users.edit') }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
+                            <a class="dropdown-item" href="{{ route('users.show',Auth::user()) }}"><i class="fa fa-address-card mr-1"></i>个人中心</a>
+                            <a class="dropdown-item" href="{{ route('users.edit',Auth::user()) }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
 
                             <div class="dropdown-divider"></div>
 

@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('title','修改个人资料')
-@section('top_css','py-4 container')
 @section('content')
     <div class="user-edit">
         <div class="container">

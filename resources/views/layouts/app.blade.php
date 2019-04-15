@@ -24,7 +24,7 @@
     <div id="app">
         @include('layouts._header')
 
-        <div class="@yield('top_css')">
+        <div class="py-4 container">
             @include('layouts._message')
             @yield('content')
         </div>

@@ -15,15 +15,6 @@ Route::get('/topic/show', function (){
     return view('topics.show');
 })->name('topic.show');
 
-Route::get('user/show',function(){
-    return view('users.show');
-})->name('users.show');
-
-Route::get('user/edit',function(){
-    return view('users.edit.edit');
-})->name('users.edit');
-
-Route::get('test', 'PagesController@test')->name('test');
 
 // 用户身份验证相关的路由
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -46,3 +37,4 @@ Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('ver
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::get('/', 'PagesController@home')->name('home');
+Route::resource('users', 'UsersController', ['only'=>['show', 'update', 'edit']]);
