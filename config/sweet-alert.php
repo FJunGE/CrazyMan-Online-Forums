@@ -5,5 +5,5 @@ return [
      * This sets the global autoclose for all alerts.
      * If you want to change a specific  alert chain ->autoclose(milliseconds) on the end.
      */
-    'autoclose' => 3000,
+    'autoclose' => 2500,
 ];
