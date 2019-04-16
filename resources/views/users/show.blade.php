@@ -3,20 +3,28 @@
 @section('content')
     <div class="user-show">
         {{-- 个人信息 --}}
-        <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('http://img.3dmgame.com/uploads/images/news/20181124/1543042277_150670.jpg');">
+        <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555436046750&di=4ea7555af15e844fad6e78c3cc1a12e9&imgtype=0&src=http%3A%2F%2Fpic115.huitu.com%2Fres%2F20190311%2F2024767_20190311104518160020_1.jpg');">
             <div class="align-items-center flex-row d-md-flex p-2 text-white w-100 position-relative container user-profile">
-                <img src="{{ config('app.url')  }}/img/avatar.jpg" class="avatar-120 avatar" alt="">
-                <div class="ml-md-3">
-                    <h1 class="mt-2 mb-0">{{ $user->name }}</h1>
-                    <div class="my-1"></div>
-                    <div class="extends text-white d-none d-md-block d-lg-flex">
-                        <div class="mr-1">
-                            <i class="fa fa-calendar-alt"></i>
-                            加入于 {{ $user->created_at->diffForHumans() }}
+                <div class="m-auto text-center">
+                    <img src="{{ config('app.url')  }}/img/avatar.jpg" class="avatar-120 avatar" alt="">
+                    <div class="md-3">
+                        <h1 class="mt-2 mb-0">{{ $user->name }}</h1>
+                        <div class="my-1"></div>
+                        <div class="extends text-white d-none d-md-block d-lg-flex">
+                            <div class="m-auto">
+                                <i class="fa fa-calendar-alt mr-1"></i>
+                                <span class="shadow">加入于 {{ $user->created_at->diffForHumans() }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pt-2">
-                        <div class="d-flex justify-content-start flex-wrap"></div>
+                        <div class="extends text-white mt-2 d-md-block d-lg-flex">
+                            <div class="m-auto">
+                                <i class="fa fa-github-square" aria-hidden="true"></i>
+                                <span class="shadow">真的猛士，敢于直面惨淡的人生，敢于正视淋漓的鲜血</span>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <div class="d-flex justify-content-start flex-wrap"></div>
+                        </div>
                     </div>
                 </div>
             </div>
