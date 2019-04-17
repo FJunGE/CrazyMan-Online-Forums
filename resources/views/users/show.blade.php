@@ -18,9 +18,16 @@
                         </div>
                         <div class="extends text-white mt-2 d-md-block d-lg-flex">
                             <div class="m-auto">
-                                <i class="fa fa-github-square" aria-hidden="true"></i>
-                                <span class="shadow">真的猛士，敢于直面惨淡的人生，敢于正视淋漓的鲜血</span>
+                                <span class="shadow">{{ $user->describe }}</span>
                             </div>
+                        </div>
+                        <div class=" mt-2 ">
+                            <a href="" class="text-white mr-2" title="github"><i class="fab fa-github fa-2x"></i></a>
+                            <a href="" class="text-white mr-2" title="微博"><i class="fab fa-weibo fa-2x"></i></a>
+                            <a href="" class="text-white mr-2" title="推特"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="" class="text-white mr-2" title="公众号"><i class="fab fa-weixin fa-2x"></i></a>
+                            <a href="" class="text-white mr-2" title="领英"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="" class="text-white mr-2" title="领英"><i class="fab fa-steam fa-2x"></i></a>
                         </div>
                         <div class="pt-2">
                             <div class="d-flex justify-content-start flex-wrap"></div>
