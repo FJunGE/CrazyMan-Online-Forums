@@ -17,4 +17,14 @@ class UsersController extends Controller
     {
         return view('users.edit.edit', compact('user'));
     }
+
+    public function update(Request $request, User $user)
+    {
+//        dd($request->all());
+        $user->update($request->all());
+
+        alert()->success('数据更新成功');
+
+        return redirect()->route('users.show', $user->id);
+    }
 }

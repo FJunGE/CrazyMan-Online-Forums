@@ -4,9 +4,9 @@
         <h5 class="d-inline-flex">编辑个人信息</h5>
     </div>
     <div class="card-body">
-        <form action="" class="form-horizontal" method="POST" accept-charset="UTF-8">
+        <form action="{{ route('users.update', $user->id) }}" class="form-horizontal" method="POST" accept-charset="UTF-8">
             {{ csrf_field() }}
-            <input type="hidden" name="_method" value="PUT">
+            @method('PUT')
 
             <div class="form-group d-flex justify-content-center">
                 <div class="col-md-2 text-center">
@@ -32,8 +32,8 @@
                 </div>
                 <div class="col-md-10">
                     <select name="gender" id="gender-field" class="form-control">
-                        <option value="1">男</option>
-                        <option value="2">女</option>
+                        <option value="1" @if($user->gender == 1) selected @endif>男</option>
+                        <option value="2" @if($user->gender == 2) selected @endif>女</option>
                     </select>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <label for="company-field" class="col-form-label text-md-left">公司名称</label>
                 </div>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="company" id="company-field" placeholder="公司名称：腾讯">
+                    <input type="text" class="form-control" name="company" id="company-field" placeholder="公司名称：腾讯" value="{{ old('company',$user->company) }}">
                 </div>
             </div>
 
@@ -52,7 +52,7 @@
                     <label for="duty-field" class="col-form-label text-md-left">岗位职责</label>
                 </div>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="duty" id="duty-field" placeholder="工作岗位职责：php程序员">
+                    <input type="text" class="form-control" name="duty" id="duty-field" placeholder="工作岗位职责：php程序员" value="{{ old('company',$user->duty) }}">
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
                     <label for="url-field" class="col-form-label text-md-left">个人站点</label>
                 </div>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="url" id="url-field" placeholder="完整的连接地址：https://bbs.crazyman.com">
+                    <input type="text" class="form-control" name="url_personal" id="url-field" placeholder="完整的连接地址：https://bbs.crazyman.com" value="{{ old('company',$user->url_personal) }}">
                 </div>
             </div>
 
@@ -72,6 +72,11 @@
                 <div class="col-md-10">
                     <textarea name="describe" id="describe-field" cols="30" rows="3" class="form-control" placeholder="自己的个性签名：一段自己的心情">{{ old('describe',$user->describe) }}</textarea>
                 </div>
+            </div>
+
+            <div class="text-center mt-2">
+
+                <button type="submit" class="btn btn-primary">修改信息</button>
             </div>
         </form>
     </div>
