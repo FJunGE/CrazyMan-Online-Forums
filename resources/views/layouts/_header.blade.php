@@ -14,6 +14,7 @@
                 <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">首页</a></li>
                 <li class="nav-item"><a href="" class="nav-link">分类</a></li>
                 <li class="nav-item"><a href="" class="nav-link">关于</a></li>
+                <li class="nav-item"><a href="" class="nav-link">商城入口</a></li>
                 <li class="nav-item">
                     <form action="" class="search-form form-inline my-2 my-lg-0">
                         {{ csrf_field() }}
