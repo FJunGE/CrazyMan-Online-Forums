@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Requests\UserRequest;
+use Auth;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('');
+    }
 
     public function show(User $user)
     {
@@ -18,9 +24,8 @@ class UsersController extends Controller
         return view('users.edit.edit', compact('user'));
     }
 
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
-//        dd($request->all());
         $user->update($request->all());
 
         alert()->success('数据更新成功');

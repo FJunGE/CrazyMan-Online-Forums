@@ -8,7 +8,12 @@
                 <div class="m-auto text-center">
                     <img src="{{ config('app.url')  }}/img/avatar.jpg" class="avatar-120 avatar" alt="">
                     <div class="md-3">
-                        <h1 class="mt-2 mb-0">{{ $user->name }}</h1>
+                        <h1 class="mt-2 mb-0 d-inline-flex">{{ $user->name }}</h1>
+                        @if($user->gender == 1)
+                            <i class="fa fa-mars ml-1" style="color: #1d68a7"></i>
+                            @else
+                            <i class="fa fa-venus ml-1" style="color: rgb(239,18,98)"></i>
+                        @endif
                         <div class="my-1"></div>
                         <div class="extends text-white d-none d-md-block d-lg-flex">
                             <div class="m-auto">
@@ -21,13 +26,16 @@
                                 <span class="shadow">{{ $user->describe }}</span>
                             </div>
                         </div>
-                        <div class=" mt-2 ">
+                        <div class="mt-2">
                             <a href="" class="text-white mr-2" title="github"><i class="fab fa-github fa-2x"></i></a>
                             <a href="" class="text-white mr-2" title="微博"><i class="fab fa-weibo fa-2x"></i></a>
                             <a href="" class="text-white mr-2" title="推特"><i class="fab fa-twitter fa-2x"></i></a>
                             <a href="" class="text-white mr-2" title="公众号"><i class="fab fa-weixin fa-2x"></i></a>
                             <a href="" class="text-white mr-2" title="领英"><i class="fab fa-linkedin fa-2x"></i></a>
-                            <a href="" class="text-white mr-2" title="领英"><i class="fab fa-steam fa-2x"></i></a>
+                            <a href="" class="text-white mr-2" title="Steam"><i class="fab fa-steam fa-2x"></i></a>
+                            @if($user->url_personal)
+                                <a href="{{ $user->user_personal }}" class="text-white mr-2" title="{{ $user->name }}的个人站点"><i class="fa fa-desktop fa-2x"></i></a>
+                            @endif
                         </div>
                         <div class="pt-2">
                             <div class="d-flex justify-content-start flex-wrap"></div>

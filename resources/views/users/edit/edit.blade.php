@@ -3,6 +3,7 @@
 @section('content')
     <div class="user-edit">
         <div class="container">
+            @include('layouts._errors')
             <div class="row mt-2">
                 <div class="col-lg-3 mb-2">
                     @include('users.edit._nav')

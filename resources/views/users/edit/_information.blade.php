@@ -52,7 +52,7 @@
                     <label for="duty-field" class="col-form-label text-md-left">岗位职责</label>
                 </div>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="duty" id="duty-field" placeholder="工作岗位职责：php程序员" value="{{ old('company',$user->duty) }}">
+                    <input type="text" class="form-control" name="duty" id="duty-field" placeholder="工作岗位职责：php程序员" value="{{ old('duty',$user->duty) }}">
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
                     <label for="url-field" class="col-form-label text-md-left">个人站点</label>
                 </div>
                 <div class="col-md-10">
-                    <input type="text" class="form-control" name="url_personal" id="url-field" placeholder="完整的连接地址：https://bbs.crazyman.com" value="{{ old('company',$user->url_personal) }}">
+                    <input type="text" class="form-control" name="url_personal" id="url-field" placeholder="完整的连接地址：https://bbs.crazyman.com" value="{{ old('url_personal',$user->url_personal) }}">
                 </div>
             </div>
 
