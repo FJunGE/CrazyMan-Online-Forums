@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Germey\Geetest\GeetestServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        \HieuLe\Active\ActiveServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Geetest' => Germey\Geetest\Geetest::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Active' => \HieuLe\Active\Facades\Active::class,
     ],
 
 ];

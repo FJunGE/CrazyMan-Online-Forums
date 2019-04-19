@@ -38,3 +38,13 @@ Route::get('email/resend', 'Auth\VerificationController@resend')->name('verifica
 
 Route::get('/', 'PagesController@home')->name('home');
 Route::resource('users', 'UsersController', ['only'=>['show', 'update', 'edit']]);
+
+// 路由名称前缀
+Route::name('users.')->group(function () {
+    Route::get('users/{users}/edit_image', 'UsersController@edit_image')->name('edit_image');
+    Route::put('users/{users}/update_image', 'UsersController@update_image')->name('update_image');
+    Route::get('users/{users}/edit_notify', 'UsersController@edit')->name('edit_notify');
+    Route::get('users/{users}/edit_social_binding', 'UsersController@edit')->name('edit_social_binding');
+    Route::get('users/{users}/edit_password', 'UsersController@edit')->name('edit_password');
+});
+

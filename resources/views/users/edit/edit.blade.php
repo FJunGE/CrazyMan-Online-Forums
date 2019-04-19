@@ -9,7 +9,15 @@
                     @include('users.edit._nav')
                 </div>
                 <div class="col-lg-9">
-                    @include('users.edit._information')
+                    @switch(Route::currentRouteName())
+                        @case ('users.edit')
+                            @include('users.edit._information')
+                        @break
+
+                        @case ('users.edit_image')
+                            @include('users.edit._image',['user'=>$user])
+                        @break
+                    @endswitch
                 </div>
             </div>
         </div>
