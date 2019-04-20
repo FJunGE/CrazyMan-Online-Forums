@@ -6,7 +6,7 @@
         <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1555436046750&di=4ea7555af15e844fad6e78c3cc1a12e9&imgtype=0&src=http%3A%2F%2Fpic115.huitu.com%2Fres%2F20190311%2F2024767_20190311104518160020_1.jpg');">
             <div class="align-items-center flex-row d-md-flex p-2 text-white w-100 position-relative container user-profile">
                 <div class="m-auto text-center">
-                    <img src="{{ config('app.url')  }}/img/avatar.jpg" class="avatar-120 avatar" alt="">
+                    <img src="{{ config('app.url').$user->avatar  }}" class="avatar-120 avatar" alt="">
                     <div class="md-3">
                         <h1 class="mt-2 mb-0 d-inline-flex">{{ $user->name }}</h1>
                         @if($user->gender == 1)

@@ -25,7 +25,7 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-// 密码重置相关路由
+// 密码重置相关路由edit_social_binding
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
@@ -37,14 +37,10 @@ Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('ver
 Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::get('/', 'PagesController@home')->name('home');
-Route::resource('users', 'UsersController', ['only'=>['show', 'update', 'edit']]);
 
-// 路由名称前缀
-Route::name('users.')->group(function () {
-    Route::get('users/{users}/edit_image', 'UsersController@edit_image')->name('edit_image');
-    Route::put('users/{users}/update_image', 'UsersController@update_image')->name('update_image');
-    Route::get('users/{users}/edit_notify', 'UsersController@edit')->name('edit_notify');
-    Route::get('users/{users}/edit_social_binding', 'UsersController@edit')->name('edit_social_binding');
-    Route::get('users/{users}/edit_password', 'UsersController@edit')->name('edit_password');
+Route::name('users.')->group(function (){
+    Route::get('/users/{user}', 'UsersController@show')->name('show');
+    Route::get('/users/{user}/edit/{active}', 'UsersController@edit')->name('edit');
+    Route::put('/users/{user}', 'UsersController@update')->name('update');
+    Route::put('/users/{user}/update_image', 'UsersController@update_image')->name('update_image');
 });
-

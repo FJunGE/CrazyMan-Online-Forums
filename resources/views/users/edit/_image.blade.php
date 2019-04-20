@@ -1,10 +1,10 @@
 <div class="box box-radius box-body">
     <div class="border-bottom mb-2">
         <i class="fa fa-edit ml-1 mr-2"></i>
-        <h5 class="d-inline-flex">图形设置{{ $user->name }}</h5>
+        <h5 class="d-inline-flex">图形设置</h5>
     </div>
     <div class="card-body">
-        <form action="" class="form-horizontal" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+        <form action="{{ route('users.update_image', $user->id) }}" class="form-horizontal" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
             {{ csrf_field() }}
             @method('PUT')
 

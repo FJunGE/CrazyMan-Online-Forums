@@ -39,14 +39,14 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <img src="{{ config('app.url') }}/img/avatar.jpg" class="avatar-30 img-responsive img-circle mr-1" alt="">
+                            <img src="{{ config('app.url').Auth::user() ->avatar }}" class="avatar-30 img-responsive img-circle mr-1" alt="">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
 
                             <a class="dropdown-item" href="{{ route('users.show',Auth::user()) }}"><i class="fa fa-address-card mr-1"></i>个人中心</a>
-                            <a class="dropdown-item" href="{{ route('users.edit',Auth::user()) }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
+                            <a class="dropdown-item" href="{{ route('users.edit',['user'=>Auth::user(),'active'=>'info']) }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
 
                             <div class="dropdown-divider"></div>
 

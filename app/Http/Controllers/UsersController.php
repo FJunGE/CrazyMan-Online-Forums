@@ -21,9 +21,9 @@ class UsersController extends Controller
         return view('users.show', compact('user'));
     }
 
-    public function edit(User $user)
+    public function edit(User $user, $active)
     {
-        return view('users.edit.edit', compact('user'));
+        return view('users.edit.edit', compact('user','active'));
     }
 
     /**
@@ -41,10 +41,6 @@ class UsersController extends Controller
     }
 
 
-    public function edit_image(User $user)
-    {
-        return view('users.edit.edit', compact('user'));
-    }
     /**
      * 更新图像
      * @param User $user
@@ -52,8 +48,17 @@ class UsersController extends Controller
      */
     public function update_image(Request $request, User $user, ImageUploadHandler $imageUploadHandler)
     {
-        if ($request->avatar){
-            $result = $imageUploadHandler->save($request->avatar, $user->id, 'avatar');
+        $this->validate($request,[
+            'avatar' => 'required|mimes:jpeg,bmp,png,gif|dimensions:min_width=208,min_height=208',
+        ],[
+            'avatar.required'=>'请上传图片',
+            'avatar.mimes'=>'图像必须是 jpeg, bmp, png, gif 格式的图片',
+            'avatar.dimensions'=>'图片的清晰度不够，宽和高需要 208px 以上',
+        ]);
+
+        if ($request->avatar)
+        {
+            $result = $imageUploadHandler->save($request->avatar, 'avatar', $user->id, 416);
             $data['avatar'] = $result['path'];
 
             $user->update($data);
