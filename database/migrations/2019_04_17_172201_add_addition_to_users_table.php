@@ -14,10 +14,21 @@ class AddAdditionToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('wechat')->nullable();
+
+            /* 用户基本信息 */
+            $table->string('describe')->nullable();
             $table->enum('gender',[1,2]);
             $table->string('company')->nullable();
             $table->string('duty')->nullable();
+            $table->integer('level')->default(0);
+            $table->boolean('is_admin')->default(false);
+
+            /* 图片 */
+            $table->string('avatar')->nullable();
+            $table->string('wechat')->nullable();
+            $table->string('background')->nullable();
+
+            /* 地址 */
             $table->string('url_personal')->nullable();
             $table->string('url_github')->nullable();
             $table->string('url_weibo')->nullable();
@@ -36,10 +47,18 @@ class AddAdditionToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('avatar');
             $table->dropColumn('wechat');
             $table->dropColumn('gender');
             $table->dropColumn('company');
             $table->dropColumn('duty');
+
+            $table->dropColumn('level');
+            $table->dropColumn('is_admin');
+            $table->dropColumn('wechat');
+            $table->dropColumn('describe');
+            $table->dropColumn('background');
+
             $table->dropColumn('url_personal');
             $table->dropColumn('url_github');
             $table->dropColumn('url_weibo');

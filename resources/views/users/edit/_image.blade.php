@@ -8,12 +8,21 @@
             {{ csrf_field() }}
             @method('PUT')
 
-            @if($user->avatar)
-                <img src="{{ config('aoo.url').$user->avatar }}" class="thumbnail img-thumbnail" alt="{{ $user->avatar }}" width="300">
-            @endif
+            <div class="d-inline-block">
+                @if($user->avatar)
+                    <img src="{{ config('app.url').$user->avatar }}" class="thumbnail img-thumbnail" alt="{{ $user->avatar }}" width="300">
+                @endif
 
-            <div class="form-group d-flex justify-content-start">
-                <input type="file" name="avatar">
+                <div class="form-group d-flex justify-content-start mb-4">
+                    <input type="file" name="avatar">
+                </div>
+            </div>
+
+            <div class="d-inline-block">
+                @if($user->avatar)
+                    <img src="{{ config('app.url').$user->background }}" class="thumbnail img-thumbnail" alt="{{ $user->background }}" width="1200">
+                @endif
+                <input type="file" name="background">
             </div>
 
             <div class="mt-2">

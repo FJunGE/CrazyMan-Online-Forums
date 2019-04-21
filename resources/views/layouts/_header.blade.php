@@ -39,7 +39,12 @@
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <img src="{{ config('app.url').Auth::user() ->avatar }}" class="avatar-30 img-responsive img-circle mr-1" alt="">
+                            @if (Auth::user() ->avatar)
+                                <img src="{{ config('app.url').Auth::user()->avatar }}" class="avatar-30 img-responsive img-circle mr-1" alt="">
+                                @else
+                                <img src="{{ config('app.url') }}/img/avatar.jpg" class="avatar-30 img-responsive img-circle mr-1" alt="">
+                            @endif
+
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
