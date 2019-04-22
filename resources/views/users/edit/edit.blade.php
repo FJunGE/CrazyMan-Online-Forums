@@ -17,6 +17,10 @@
                         @case ('image')
                             @include('users.edit._image')
                         @break
+
+                        @case ('password')
+                            @include('users.edit._password')
+                        @break
                     @endswitch
                 </div>
             </div>
