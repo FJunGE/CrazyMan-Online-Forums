@@ -10,11 +10,29 @@
 
         <div class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-1" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav justify-content-center">
+            <ul class="navbar-nav justify-content-center dropdown">
                 <li class="nav-item"><a href="{{ route('home') }}" class="nav-link">首页</a></li>
-                <li class="nav-item"><a href="" class="nav-link">分类</a></li>
+                <li class="nav-item">
+                    <a href="navbarDropdown1" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        分类 <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown1" style="min-width: 7rem;left: 32px;">
+
+                        <a class="dropdown-item" href="{{ route('users.show',Auth::user()) }}"><i class="fa fa-address-card mr-1"></i>个人中心</a>
+                        <a class="dropdown-item" href="{{ route('users.edit',['user'=>Auth::user(),'active'=>'info']) }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <form action="{{ route('logout') }}"  method="POST">
+                            {{ csrf_field() }}
+                            <button class="btn btn-danger btn-block" type="submit" name="button">
+                                退出
+                            </button>
+                        </form>
+                    </div sty>
+                </li>
                 <li class="nav-item"><a href="" class="nav-link">关于</a></li>
-                <li class="nav-item"><a href="" class="nav-link">商城入口</a></li>
+                <li class="nav-item"><a href="" class="nav-link">商城</a></li>
                 <li class="nav-item">
                     <form action="" class="search-form form-inline my-2 my-lg-0">
                         {{ csrf_field() }}
