@@ -17,19 +17,11 @@
                         分类 <span class="caret"></span>
                     </a>
                     <div class="dropdown-menu text-center" aria-labelledby="navbarDropdown1" style="min-width: 7rem;left: 32px;">
-
-                        <a class="dropdown-item" href="{{ route('users.show',Auth::user()) }}"><i class="fa fa-address-card mr-1"></i>个人中心</a>
-                        <a class="dropdown-item" href="{{ route('users.edit',['user'=>Auth::user(),'active'=>'info']) }}"><i class="fa fa-edit mr-1"></i>修改资料</a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <form action="{{ route('logout') }}"  method="POST">
-                            {{ csrf_field() }}
-                            <button class="btn btn-danger btn-block" type="submit" name="button">
-                                退出
-                            </button>
-                        </form>
-                    </div sty>
+                        <a class="dropdown-item" href=""><i class="fa fa-share-alt mr-2"></i>资源分享</a>
+                        <a class="dropdown-item" href=""><i class="fa fa-question-circle mr-2"></i>技术问答</a>
+                        <a class="dropdown-item" href=""><i class="fa fa-book mr-2"></i>教程文章</a>
+                        <a class="dropdown-item" href=""><i class="fa fa-bullhorn mr-2"></i>社区公告</a>
+                    </div>
                 </li>
                 <li class="nav-item"><a href="" class="nav-link">关于</a></li>
                 <li class="nav-item"><a href="" class="nav-link">商城</a></li>
