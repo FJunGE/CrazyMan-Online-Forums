@@ -44,3 +44,4 @@ Route::name('users.')->group(function (){
     Route::put('/users/{user}', 'UsersController@update')->name('update');
     Route::put('/users/{user}/update_image', 'UsersController@update_image')->name('update_image');
 });
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
