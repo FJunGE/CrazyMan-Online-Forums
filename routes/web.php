@@ -45,3 +45,7 @@ Route::name('users.')->group(function (){
     Route::put('/users/{user}/update_image', 'UsersController@update_image')->name('update_image');
 });
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+
+Route::get('donate', 'DonateController@show')->name('donate.show');
+Route::post('donate', 'DonateController@paypal')->name('donate.paypal');
+Route::get('paypal/callback/{result}', 'DonateController@callback')->name('paypal.callback');

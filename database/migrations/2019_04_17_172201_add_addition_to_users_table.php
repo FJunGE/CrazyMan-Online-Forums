@@ -47,7 +47,7 @@ class AddAdditionToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('avatar');
+            /*$table->dropColumn('avatar');
             $table->dropColumn('wechat');
             $table->dropColumn('gender');
             $table->dropColumn('company');
@@ -55,7 +55,7 @@ class AddAdditionToUsersTable extends Migration
 
             $table->dropColumn('level');
             $table->dropColumn('is_admin');
-            $table->dropColumn('wechat');
+            $table->dropColumn('wechat');*/
             $table->dropColumn('describe');
             $table->dropColumn('background');
 
