@@ -26,6 +26,11 @@ class EventServiceProvider extends ServiceProvider
             // 监听器
             \App\Listeners\EmailVerified::class,
         ],
+
+        \App\Events\PaymentSuccess::class => [
+            \App\Listeners\PaymenSuccessHandle::class,
+        ],
+
     ];
 
     /**

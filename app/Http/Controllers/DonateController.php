@@ -20,14 +20,17 @@ use alert;
 class DonateController extends Controller
 {
     private $api_context;
+    private $currency;
     public function __construct()
     {
+//        $this->middleware('auth')->except('show');
         $paypal_conf = \Config::get('paypal');
         $this->api_context = new ApiContext(new OAuthTokenCredential(
             $paypal_conf['client_id'],
             $paypal_conf['secret']
         ));
         $this->api_context->setConfig($paypal_conf['settings']);
+        $this->currency = 'USD';
     }
 
     public function show(){
@@ -35,9 +38,6 @@ class DonateController extends Controller
     }
 
     public function paypal(Request $request){
-//        alert()->info('跳转支付中 请稍候... : <img src="http://img.mp.sohu.com/upload/20170720/278d054eda994279a5e033aae5f8afd8_th.png">')->html()->autoclose(3000);
-
-
         $payer = new Payer();
         $payer->setPaymentMethod('paypal');
 
@@ -58,8 +58,6 @@ class DonateController extends Controller
 
         $payment = new Payment();
         $payment->setIntent('sale')->setPayer($payer)->setRedirectUrls($redirectUrl)->setTransactions([$transaction]);
-
-        alert()->success('数据更新成功');
         try{
             $payment->create($this->api_context);
         }catch(PayPalConnectionException $e){
@@ -69,18 +67,24 @@ class DonateController extends Controller
                 alert()->error('支付失败，请尝试其他支付方式');
             }
         }
+
+        $paymentData = [
+            'amount' => $request->amount,
+            'type'   => 'Paypal',
+            'status' => '未支付',
+            'currency'=> $this->currency,
+            'user_id'=>1,
+        ];
+        Donate::create($paymentData);
         $approvalUrl = $payment->getApprovalLink();
         header("Location: {$approvalUrl}");
     }
 
     public function callback(bool $result,Request $request){
-        $data = $request->all();
         $paymentID = trim($request->get('paymentId'));
         $payerID= trim($request->get('PayerID'));
-//        dd($result,$paymentID,$payerID,$request->get('token'));
 
         if (!$result && !$paymentID && !$payerID){
-            alert()->success('交易关闭，你已取消支付');
             return redirect()->route('donate.show');
         }
 
@@ -104,7 +108,6 @@ class DonateController extends Controller
             session('success',"交易关闭， 交易id：$paymentID, 支付者：$payerID");
         }
 
-        Donate::create($data);
         alert()->success("支付成功！，感谢您，$payerID");
         return redirect()->route('home');
 

@@ -13,14 +13,15 @@ class CreateDonateTable extends Migration
      */
     public function up()
     {
-        Schema::create('donate', function (Blueprint $table) {
+        Schema::create('donates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('amount');
+            $table->float('amount')->default(0);
             $table->string('type');
-            $table->enum('status',['已支付','取消支付','支付失败']);
+            $table->enum('status',['未支付','已支付','取消支付','支付失败']);
             $table->string('currency')->comment('币种');
-            $table->integer('is_email');
+            $table->boolean('is_email')->default(false);
             $table->integer('user_id');
+            $table->string('payment_id')->default(null);
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateDonateTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donate');
+        Schema::dropIfExists('donates');
     }
 }
