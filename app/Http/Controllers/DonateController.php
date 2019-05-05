@@ -17,6 +17,7 @@ use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Exception\PayPalConnectionException;
 use PayPal\Rest\ApiContext;
 use alert;
+use App\Http\Middleware\LimitFromRepeatSubmit;
 
 class DonateController extends Controller
 {
@@ -55,7 +56,7 @@ class DonateController extends Controller
         $transaction->setAmount($amount)->setItemList($itemList)->setDescription('捐赠CrazyMan网站资金');
 
         $redirectUrl = new RedirectUrls();
-        $redirectUrl->setReturnUrl(route('paypal.cancel'))->setCancelUrl(route('paypal.done'));
+        $redirectUrl->setReturnUrl(route('paypal.done',['donateId'=>1]))->setCancelUrl(route('paypal.cancel'));
 
         $payment = new Payment();
         $payment->setIntent('sale')->setPayer($payer)->setRedirectUrls($redirectUrl)->setTransactions([$transaction]);
@@ -81,38 +82,5 @@ class DonateController extends Controller
         Donate::create($paymentData);
         $approvalUrl = $payment->getApprovalLink();
         header("Location: {$approvalUrl}");
-    }
-
-    public function callback(bool $result,Request $request){
-        $paymentID = trim($request->get('paymentId'));
-        $payerID= trim($request->get('PayerID'));
-
-        if (!$result && !$paymentID && !$payerID){
-            return redirect()->route('donate.show');
-        }
-
-        if (!isset($paymentID,$payerID,$result)){
-            alert()->danger('支付失败');
-            return redirect()->route('donate.show');
-        }
-
-        if (!$result){
-            session('success',"交易关闭， 交易id：$paymentID, 支付者：$payerID");
-            return redirect()->route('donate.show');
-        }
-
-        $payment = Payment::get($paymentID, $this->api_context);
-        $execute = new PaymentExecution();
-        $execute->setPayerId($payerID);
-
-        try{
-            $payment->execute($execute, $this->api_context);
-        }catch(Exception $e){
-            session('success',"交易关闭， 交易id：$paymentID, 支付者：$payerID");
-        }
-
-        event(new PaymentSuccess());
-        return redirect()->route('home');
-
     }
 }

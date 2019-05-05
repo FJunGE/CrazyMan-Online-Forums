@@ -7,6 +7,7 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <div class="">
+                    {{--<input type="hidden" value="{{ \Illuminate\Support\Str::random(40) }}">--}}
                     <input type="number" step="0.01" class="form-control" name="amount" id="money-field" placeholder="捐款的金额" value="" style="max-width: 50%">
                 </div>
             </div>

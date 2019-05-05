@@ -48,5 +48,5 @@ Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'crea
 
 Route::get('donate', 'DonateController@show')->name('donate.show');
 Route::post('donate', 'DonateController@paypal')->name('donate.paypal');
-Route::post('paypal/done', 'Payment\PaypalController@done')->name('paypal.callback');
-Route::post('paypal/cancel', 'Payment\PaypalController@cancel')->name('paypal.callback');
+Route::post('paypal/done/{}', 'Payment\PaypalController@done')->name('paypal.done');
+Route::post('paypal/cancel', 'Payment\PaypalController@cancel')->name('paypal.cancel');
