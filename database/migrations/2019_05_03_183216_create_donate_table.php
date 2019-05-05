@@ -17,11 +17,11 @@ class CreateDonateTable extends Migration
             $table->bigIncrements('id');
             $table->float('amount')->default(0);
             $table->string('type');
-            $table->enum('status',['未支付','已支付','取消支付','支付失败']);
+            $table->integer('status')->default(0)->comment('0=>未支付，1=>已支付，3=>支付异常，4=>取消支付');
             $table->string('currency')->comment('币种');
             $table->boolean('is_email')->default(false);
             $table->integer('user_id');
-            $table->string('payment_id')->default(null);
+            $table->string('payment_id')->nullable(true);
             $table->timestamps();
         });
     }

@@ -3,10 +3,10 @@
 @section('content')
     <div class="user-show">
         {{-- 个人信息 --}}
-        <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('{{ config('app.url').$user->background }}');">
+        <header class="user-header d-flex align-items-end bg-grey-blue py-3" style="background-image:url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2489492398,1961915359&fm=26&gp=0.jpg');">
             <div class="align-items-center flex-row d-md-flex p-2 text-white w-100 position-relative container user-profile">
                 <div class="m-auto text-center">
-                    <img src="{{ config('app.url').$user->avatar  }}" class="avatar-120 avatar" alt="">
+                    <img src="{{ config('app.url')  }}/img/avatar.jpg" class="avatar-120 avatar" alt="">
                     <div class="md-3">
                         <h1 class="mt-2 mb-0 d-inline-flex">{{ $user->name }}</h1>
                         @if($user->gender == 1)

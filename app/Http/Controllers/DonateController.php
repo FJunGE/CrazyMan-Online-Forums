@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PaymentSuccess;
 use App\Models\Donate;
 use Illuminate\Http\Request;
 use PayPal\Api\Amount;
@@ -48,13 +49,13 @@ class DonateController extends Controller
         $itemList->setItems([$item]);
 
         $amount = new Amount();
-        $amount->setCurrency('USD')->setTotal($request->get('amount'));
+        $amount->setCurrency($this->currency)->setTotal($request->get('amount'));
 
         $transaction = new Transaction();
         $transaction->setAmount($amount)->setItemList($itemList)->setDescription('捐赠CrazyMan网站资金');
 
         $redirectUrl = new RedirectUrls();
-        $redirectUrl->setReturnUrl(route('paypal.callback',['result'=>1]))->setCancelUrl(route('paypal.callback',['result'=>0]));
+        $redirectUrl->setReturnUrl(route('paypal.cancel'))->setCancelUrl(route('paypal.done'));
 
         $payment = new Payment();
         $payment->setIntent('sale')->setPayer($payer)->setRedirectUrls($redirectUrl)->setTransactions([$transaction]);
@@ -63,8 +64,10 @@ class DonateController extends Controller
         }catch(PayPalConnectionException $e){
             if (config('app.debug')){
                 alert()->error('连接失败，稍后在尝试');
+                return redirect()->route('donate.show');
             }else{
                 alert()->error('支付失败，请尝试其他支付方式');
+                return redirect()->route('donate.show');
             }
         }
 
@@ -98,7 +101,7 @@ class DonateController extends Controller
             return redirect()->route('donate.show');
         }
 
-        $payment = Payment::get($paymentID,$this->api_context);
+        $payment = Payment::get($paymentID, $this->api_context);
         $execute = new PaymentExecution();
         $execute->setPayerId($payerID);
 
@@ -108,7 +111,7 @@ class DonateController extends Controller
             session('success',"交易关闭， 交易id：$paymentID, 支付者：$payerID");
         }
 
-        alert()->success("支付成功！，感谢您，$payerID");
+        event(new PaymentSuccess());
         return redirect()->route('home');
 
     }
