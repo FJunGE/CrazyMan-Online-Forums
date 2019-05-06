@@ -40,27 +40,37 @@ class DonateController extends Controller
     }
 
     public function paypal(Request $request){
-        $payer = new Payer();
-        $payer->setPaymentMethod('paypal');
 
-        $item = new Item();
-        $item->setName('捐赠资金')->setCurrency('USD')->setQuantity(1)->setPrice($request->get('amount'));
+        $paymentData = [
+            'amount' => $request->amount,
+            'type'   => 'Paypal',
+            'status' => '未支付',
+            'currency'=> $this->currency,
+            'user_id'=>1,
+        ];
+        $donate = Donate::create($paymentData);
 
-        $itemList =  new ItemList();
-        $itemList->setItems([$item]);
-
-        $amount = new Amount();
-        $amount->setCurrency($this->currency)->setTotal($request->get('amount'));
-
-        $transaction = new Transaction();
-        $transaction->setAmount($amount)->setItemList($itemList)->setDescription('捐赠CrazyMan网站资金');
-
-        $redirectUrl = new RedirectUrls();
-        $redirectUrl->setReturnUrl(route('paypal.done',['donateId'=>1]))->setCancelUrl(route('paypal.cancel'));
-
-        $payment = new Payment();
-        $payment->setIntent('sale')->setPayer($payer)->setRedirectUrls($redirectUrl)->setTransactions([$transaction]);
         try{
+            $payer = new Payer();
+            $payer->setPaymentMethod('paypal');
+
+            $item = new Item();
+            $item->setName('捐赠资金')->setCurrency('USD')->setQuantity(1)->setPrice($request->get('amount'));
+
+            $itemList =  new ItemList();
+            $itemList->setItems([$item]);
+
+            $amount = new Amount();
+            $amount->setCurrency($this->currency)->setTotal($request->get('amount'));
+
+            $transaction = new Transaction();
+            $transaction->setAmount($amount)->setItemList($itemList)->setDescription('捐赠CrazyMan网站资金');
+
+            $redirectUrl = new RedirectUrls();
+            $redirectUrl->setReturnUrl(route('paypal.done',['donateId'=>1]))->setCancelUrl(route('paypal.cancel'));
+
+            $payment = new Payment();
+            $payment->setIntent('sale')->setPayer($payer)->setRedirectUrls($redirectUrl)->setTransactions([$transaction]);
             $payment->create($this->api_context);
         }catch(PayPalConnectionException $e){
             if (config('app.debug')){
@@ -72,14 +82,7 @@ class DonateController extends Controller
             }
         }
 
-        $paymentData = [
-            'amount' => $request->amount,
-            'type'   => 'Paypal',
-            'status' => '未支付',
-            'currency'=> $this->currency,
-            'user_id'=>1,
-        ];
-        Donate::create($paymentData);
+
         $approvalUrl = $payment->getApprovalLink();
         header("Location: {$approvalUrl}");
     }
