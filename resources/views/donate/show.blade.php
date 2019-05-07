@@ -13,13 +13,13 @@
             </div>
             <div class="form-group">
                 <label class="radio-inline mr-5">
-                    <input type="radio" name="Payment" value="paypal"> PayPal
+                    <input type="radio" name="payment_mothod" value="5"> PayPal
                 </label>
                 <label class="radio-inline mr-5">
-                    <input type="radio" name="Payment" value="alipay"> AliPay
+                    <input type="radio" name="type" value="13"> AliPay
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="Payment" value="wechatpay"> WechatPay
+                    <input type="radio" name="type" value="15"> WechatPay
                 </label>
             </div>
             <div>
@@ -31,22 +31,24 @@
     <div class="box box-radius box-body mt-3" style="background: white">
         <h5 class="p-2">捐赠记录</h5>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between ">
-                    <span>10.USD</span>
-                    <span>2019-05-03 17:53:36</span>
-                    <span>Paypal</span>
-                    <span>交易成功</span>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between ">
-                    <span>10.USD</span>
-                    <span>2019-05-03 17:53:36</span>
-                    <span>Paypal</span>
-                    <a href="#">交易关闭</a>
-                </div>
-            </li>
+            @if(empty($donate))
+                <span class="text-center">暂无记录</span>
+            @else
+                @foreach($donates as $donate)
+                    <li class="list-group-item">
+                        <div class="d-flex justify-content-between ">
+                            <span>${{ number_format($donate->amount,2) }}</span>
+                            <span>{{ $donate->created_at }}</span>
+                            <span>{{ $donate->type }}</span>
+                            @if($donate->status == '未支付')
+                                <a href="">{{ $donate->status }}</a>
+                            @else
+                                <span>{{ $donate->status }}</span>
+                            @endif
+                        </div>
+                    </li>
+                @endforeach
+            @endif
         </ul>
     </div>
 @endsection

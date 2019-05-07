@@ -16,7 +16,7 @@ class CreateDonateTable extends Migration
         Schema::create('donates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->float('amount')->default(0);
-            $table->string('type');
+            $table->integer('payment_method')->default(0);
             $table->integer('status')->default(0)->comment('0=>未支付，1=>已支付，3=>支付异常，4=>取消支付');
             $table->string('currency')->comment('币种');
             $table->boolean('is_email')->default(false);

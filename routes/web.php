@@ -46,7 +46,7 @@ Route::name('users.')->group(function (){
 });
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
 
-Route::get('donate', 'DonateController@show')->name('donate.show');
+Route::get('donate/{user}', 'DonateController@show')->name('donate.show');
 Route::post('donate', 'DonateController@paypal')->name('donate.paypal');
-Route::get('paypal/done/{donateId}', 'Payment\PaypalController@done')->name('paypal.done');
+Route::get('paypal/done/{donate}', 'Payment\PaypalController@done')->name('paypal.done');
 Route::get('paypal/cancel', 'Payment\PaypalController@cancel')->name('paypal.cancel');

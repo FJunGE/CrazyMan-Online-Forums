@@ -27,6 +27,6 @@ class PaymenSuccessHandle
      */
     public function handle(PaymentSuccess $event)
     {
-        alert()->success('交易关闭，你已取消支付');
+        alert()->success('交易成功，感谢您我的恩人');
     }
 }

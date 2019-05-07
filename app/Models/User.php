@@ -42,4 +42,10 @@ class User extends Authenticatable implements MustVerifyEmailContract
     protected $guarded = [
         'geetest_challenge', 'geetest_validate', 'geetest_seccode'
     ];
+
+    // 一对多
+    public function donates()
+    {
+        $this->hasMany('App\Models\Donate');
+    }
 }

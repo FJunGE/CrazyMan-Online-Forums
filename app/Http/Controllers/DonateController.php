@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\PaymentSuccess;
 use App\Models\Donate;
 use Illuminate\Http\Request;
 use PayPal\Api\Amount;
@@ -10,14 +9,13 @@ use PayPal\Api\Item;
 use PayPal\Api\ItemList;
 use PayPal\Api\Payer;
 use PayPal\Api\Payment;
-use PayPal\Api\PaymentExecution;
 use PayPal\Api\RedirectUrls;
 use PayPal\Api\Transaction;
 use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Exception\PayPalConnectionException;
 use PayPal\Rest\ApiContext;
 use alert;
-use App\Http\Middleware\LimitFromRepeatSubmit;
+use Auth;
 
 class DonateController extends Controller
 {
@@ -25,7 +23,7 @@ class DonateController extends Controller
     private $currency;
     public function __construct()
     {
-//        $this->middleware('auth')->except('show');
+        $this->middleware('auth')->except('');
         $paypal_conf = \Config::get('paypal');
         $this->api_context = new ApiContext(new OAuthTokenCredential(
             $paypal_conf['client_id'],
@@ -35,9 +33,18 @@ class DonateController extends Controller
         $this->currency = 'USD';
     }
 
-    public function show(){
-        return view('donate.show');
+    public function show(Request $request){
+        $donates = Donate::where('user_id', $request->user)->orderBy('created_at','desc')->paginate(15);
+        return view('donate.show',compact('donates'));
     }
+
+    public function store(Request $request){
+        $this->validate($request, [
+            'amount' => 'required|numeric',
+            'payment_mothod' => 'required',
+        ]);
+    }
+
 
     public function paypal(Request $request){
 
@@ -46,10 +53,9 @@ class DonateController extends Controller
             'type'   => 'Paypal',
             'status' => '未支付',
             'currency'=> $this->currency,
-            'user_id'=>1,
+            'user_id'=> Auth::id(),
         ];
         $donate = Donate::create($paymentData);
-
         try{
             $payer = new Payer();
             $payer->setPaymentMethod('paypal');
@@ -67,7 +73,7 @@ class DonateController extends Controller
             $transaction->setAmount($amount)->setItemList($itemList)->setDescription('捐赠CrazyMan网站资金');
 
             $redirectUrl = new RedirectUrls();
-            $redirectUrl->setReturnUrl(route('paypal.done',['donateId'=>1]))->setCancelUrl(route('paypal.cancel'));
+            $redirectUrl->setReturnUrl(route('paypal.done',['donateId'=>$donate->id]))->setCancelUrl(route('paypal.cancel'));
 
             $payment = new Payment();
             $payment->setIntent('sale')->setPayer($payer)->setRedirectUrls($redirectUrl)->setTransactions([$transaction]);

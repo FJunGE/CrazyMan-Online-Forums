@@ -11,6 +11,7 @@ use PayPal\Api\Payment;
 use PayPal\Api\PaymentExecution;
 use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Rest\ApiContext;
+use Auth;
 
 class PaypalController extends Controller
 {
@@ -25,17 +26,17 @@ class PaypalController extends Controller
         $this->api_context->setConfig($paypal_conf['settings']);
     }
 
-    public function done(Request $request, $donateId)
+    public function done(Request $request, $donate)
     {
         $paymentID = trim($request->get('paymentId'));
         $payerID= trim($request->get('PayerID'));
 
-        if (!isset($paymentID,$payerID,$donateId)){
+        if (!isset($paymentID,$payerID,$donate)){
             alert()->error('支付失败');
             return redirect()->route('donate.show');
         }
 
-        if (!$donateId){
+        if (!$donate){
             session('success',"交易关闭， 交易id：$paymentID, 支付者：$payerID");
             return redirect()->route('donate.show');
         }
@@ -51,7 +52,7 @@ class PaypalController extends Controller
         }
 
         event(new PaymentSuccess());
-        $donate = Donate::find($donateId);
+        $donate = Donate::find($donate);
         $donate->status = 1;
         $donate->payment_id = $paymentID;
         $donate->save();
@@ -62,6 +63,6 @@ class PaypalController extends Controller
     public function cancel()
     {
         alert()->success('交易关闭');
-        return redirect()->route('donate.show');
+        return redirect()->route('donate.show', ['user'=>Auth::id()]);
     }
 }
