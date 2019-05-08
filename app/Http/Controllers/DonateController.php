@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Donate;
+use App\Models\PaymentMethods;
 use Illuminate\Http\Request;
 use PayPal\Api\Amount;
 use PayPal\Api\Item;
@@ -34,8 +35,9 @@ class DonateController extends Controller
     }
 
     public function show(Request $request){
+        $paymentMothods = PaymentMethods::all();
         $donates = Donate::where('user_id', $request->user)->orderBy('created_at','desc')->paginate(15);
-        return view('donate.show',compact('donates'));
+        return view('donate.show',compact('donates','paymentMothods'));
     }
 
     public function store(Request $request){

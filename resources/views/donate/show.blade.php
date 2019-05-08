@@ -12,15 +12,11 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="radio-inline mr-5">
-                    <input type="radio" name="payment_mothod" value="5"> PayPal
-                </label>
-                <label class="radio-inline mr-5">
-                    <input type="radio" name="type" value="13"> AliPay
-                </label>
-                <label class="radio-inline">
-                    <input type="radio" name="type" value="15"> WechatPay
-                </label>
+                @foreach($paymentMothods as $mothod)
+                    <label class="radio-inline mr-5">
+                        <input type="radio" name="payment_mothod" value="{{ $mothod->id }}"> {{ $mothod->method }}
+                    </label>
+                @endforeach
             </div>
             <div>
                 <button type="submit" class="btn btn-primary">去支付</button>
