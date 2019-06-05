@@ -24,9 +24,12 @@ $factory->define(User::class, function (Faker $faker) {
         'email_verified_at' => now(),
         'password' => bcrypt('huan0579'), // password
         'remember_token' => Str::random(10),
-        'describe' => $faker->text,
+        'describe' => $faker->sentence,
         'company' => $faker->company,
-        'duty' => 'phper',
+        'gender' => mt_rand(1,2),
+        'level' => mt_rand(1,50),
+        'avatar' => '/uploads/images/avatar/201904/27/2_1556358973_CewWBYqJc9.jpg',
+        'background' => '/uploads/images/background/201904/27/2_1556359062_u0ISuOHEDZ.jpg',
         'created_at' => $date_time,
         'updated_at' => $date_time,
     ];

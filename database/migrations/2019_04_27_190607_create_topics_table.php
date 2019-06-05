@@ -19,7 +19,7 @@ class CreateTopicsTable extends Migration
             $table->integer('fabulous')->unsigned()->default(0)->comment('点赞数');
             $table->integer('forward')->unsigned()->default(0)->comment('转发数');
             $table->integer('last_reply_user_id')->unsigned()->default(0);
-            $table->integer('order')->unsigned()->default(0);
+            $table->integer('order')->unsigned()->default(0)->comment('排序');
             $table->text('excerpt')->nullable();
             $table->string('slug')->nullable();
             $table->timestamps();
